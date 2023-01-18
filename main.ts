@@ -1,6 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    for (let index = 0; index < 8; index++) {
-        music.playMelody("E F A C5 F D F C ", 120)
+    answer = randint(0, 5)
+    if (answer == 0) {
+        basic.showString("yep")
+    } else if (answer == 1) {
+        basic.showString("nope")
+    } else if (answer == 2) {
+        basic.showString("maybe")
+    } else if (answer == 3) {
+        basic.showString("what do you think")
+    } else if (answer == 4) {
+        basic.showString("bruh")
+    } else if (answer == 5) {
+        basic.showString("welllll")
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -59,21 +70,26 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    answer = randint(0, 5)
-    if (answer == 0) {
-        basic.showString("yep")
-    } else if (answer == 1) {
-        basic.showString("nope")
-    } else if (answer == 2) {
-        basic.showString("maybe")
-    } else if (answer == 3) {
-        basic.showString("what do you think")
-    } else if (answer == 4) {
-        basic.showString("bruh")
-    } else if (answer == 5) {
-        basic.showString("welllll")
+    for (let index = 0; index < 8; index++) {
+        music.playMelody("E F A C5 F D F C ", 120)
     }
 })
-let answer = 0
 let score = 0
+let answer = 0
+for (let index = 0; index < 4; index++) {
+    basic.showLeds(`
+        # # . . .
+        # # . . #
+        . . # # .
+        # # . . #
+        # # . . .
+        `)
+    basic.showLeds(`
+        # # . . .
+        # # # . .
+        # # . . .
+        # # # . .
+        # # . . .
+        `)
+}
 basic.showString("?")
