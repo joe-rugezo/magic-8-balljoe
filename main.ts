@@ -70,7 +70,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    for (let index = 0; index < 8; index++) {
+    for (let index = 0; index < 24; index++) {
         music.playMelody("E F A C5 F D F C ", 120)
     }
 })
@@ -78,18 +78,18 @@ let score = 0
 let answer = 0
 for (let index = 0; index < 4; index++) {
     basic.showLeds(`
-        # # . . .
-        # # . . #
-        . . # # .
-        # # . . #
-        # # . . .
+        # # . # #
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
         `)
     basic.showLeds(`
-        # # . . .
-        # # # . .
-        # # . . .
-        # # # . .
-        # # . . .
+        . . . . #
+        # # . # .
+        . # . # .
+        . . . . .
+        . . # . .
         `)
 }
 basic.showString("?")
