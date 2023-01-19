@@ -1,3 +1,4 @@
+// And this is my 8 ball code
 input.onButtonPressed(Button.A, function () {
     answer = randint(0, 5)
     if (answer == 0) {
@@ -32,6 +33,7 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
+// This is just like the dice code, except it has numbers instead of code
 input.onButtonPressed(Button.AB, function () {
     score = randint(0, 5) + 1
     if (score == 0) {
@@ -55,6 +57,7 @@ input.onButtonPressed(Button.AB, function () {
     }
     basic.pause(100)
 })
+// this code is for the dotted dice, just like a regular dice
 input.onButtonPressed(Button.B, function () {
     score = randint(0, 5) + 1
     if (score == 0) {
@@ -114,11 +117,15 @@ input.onButtonPressed(Button.B, function () {
     }
     basic.pause(100)
 })
+// this is voluntarily music
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 24; index++) {
         music.playMelody("E F A C5 F D F C ", 120)
     }
 })
+// This is the start animation 
+// (Joe)
+// 17/1/2023
 let score = 0
 let answer = 0
 for (let index = 0; index < 4; index++) {
